@@ -13,13 +13,13 @@ proxy:
     description: Application to do manual gating on cytometry data
     container-cmd: ["R", "-e", "gating::run_app()"]
     container-image: 781462664882.dkr.ecr.ap-southeast-1.amazonaws.com/gating:latest
-    container-network: sp-example-net
+    container-network: sp-net
   - id: 02_gating
     display-name: Manual Gating
     description: Application to do manual gating on cytometry data
     container-cmd: ["R", "-e", "gating::run_app()"]
     container-image: 781462664882.dkr.ecr.ap-southeast-1.amazonaws.com/gating:develop
-    container-network: sp-example-net
+    container-network: sp-net
 logging:
   file:
     shinyproxy.log
